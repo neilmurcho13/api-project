@@ -6,3 +6,11 @@ const newsApiKey = "&apiKey=bb9fc9b6b8af4a6bab3079213d4c4c9d";
 export const EverythingLondon = () => {
   return axios.get(`${baseUrl}q=london${newsApiKey}`);
 };
+
+export const EverythingNewYork = () => {
+  return axios.get(`${baseUrl}q=newyork${newsApiKey}`);
+};
+
+export const EverythingNewDelhi = () => {
+  return axios.get(`${baseUrl}q=dehli${newsApiKey}`);
+};

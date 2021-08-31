@@ -16,8 +16,8 @@ const NavBar = () => {
             <Link to="/newyork" className="navbar-item">
               New York
             </Link>
-            <Link to="/delhi" className="navbar-item">
-              Delhi
+            <Link to="/newdelhi" className="navbar-item">
+              New Delhi
             </Link>
           </div>
         </div>

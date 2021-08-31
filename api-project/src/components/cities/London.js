@@ -1,5 +1,5 @@
 import React from "react";
-import { EverythingLondon } from "../../lib/Api";
+import { EverythingLondon } from "../../lib/NewsApi";
 import CityCard from "../cityIndex/CityCard";
 
 const London = () => {
@@ -23,9 +23,11 @@ const London = () => {
         <div className="columns is-multiline">
           {state.londonNews.map((london) => (
             <CityCard
+              key={london.key}
               title={london.title}
               description={london.description}
               url={london.url}
+              urlToImage={london.urlToImage}
             />
           ))}
         </div>
