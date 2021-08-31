@@ -6,6 +6,7 @@ import "./App.css";
 import London from "./components/cities/London";
 import NewYork from "./components/cities/NewYork";
 import Delhi from "./components/cities/Delhi";
+import Images from "./components/common/Images";
 // import Home from "./components/common/Home";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/london" component={London}></Route>
         <Route path="/newyork" component={NewYork}></Route>
         <Route path="/delhi" component={Delhi}></Route>
+        <Route path="/images" component={Images}></Route>
         <Route path="/" component={Home}></Route>
       </Switch>
     </BrowserRouter>
