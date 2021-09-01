@@ -1,12 +1,12 @@
 import React from "react";
-import { EverythingLondon } from "../../lib/Api";
+import { EverythingLondon } from "../../lib/NewsApi";
 
 // Neil's new branch
 
 const Home = () => {
   return (
     <h1>
-      The Niel and Olly News App!!! <br></br>On this homepage we need a list of
+      The Neil and Olly News App!!! <br></br>On this homepage we need a list of
       the 3 cities.
       <br></br> When click on each city it will link to this component.{" "}
       <br></br>On each component should have the top headlines articles for the
