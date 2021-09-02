@@ -1,8 +1,10 @@
 import React from "react";
 import { EverythingNewDelhi } from "../../lib/NewsApi";
 import CityCard from "../cityIndex/CityCard";
+import CityImage from "../cityIndex/CityImage";
+import DelhiImages from "../images/DelhiImages";
 
-const NewDehli = () => {
+const NewDelhi = () => {
   const [state, setState] = React.useState({ newDelhiNews: [] });
 
   const fetchNewDelhiFromApi = async () => {
@@ -10,7 +12,7 @@ const NewDehli = () => {
       const res = await EverythingNewDelhi();
       setState({ newDelhiNews: res.data.articles });
     } catch (err) {
-      console.log("an error has occured fetching delhi news", err);
+      console.log("an error has occurred fetching delhi news", err);
     }
   };
   React.useEffect(() => {
@@ -19,8 +21,13 @@ const NewDehli = () => {
   console.log(state);
   return (
     <section className="section">
+      <DelhiImages />
       <div className="container">
         <div className="columns is-multiline">
+          {/* <CityImage />
+          <CityImage
+            urls={state.unsplashImage.urls.full}
+            image_description={state.unsplashImage.alt_description} /> */}
           {state.newDelhiNews.map((newDelhi) => (
             <CityCard
               key={newDelhi.key}
@@ -36,4 +43,4 @@ const NewDehli = () => {
   );
 };
 
-export default NewDehli;
+export default NewDelhi;

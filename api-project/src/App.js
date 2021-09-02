@@ -9,7 +9,7 @@ import NewYork from "./components/cities/NewYork";
 import NewDelhi from "./components/cities/NewDelhi";
 
 
-import Images from "./components/common/Images";
+import Images from "./components/images/Images";
 
 // import Home from "./components/common/Home";
 
