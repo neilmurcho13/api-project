@@ -8,9 +8,6 @@ import NewYork from "./components/cities/NewYork";
 
 import NewDelhi from "./components/cities/NewDelhi";
 
-
-import Images from "./components/common/Images";
-
 // import Home from "./components/common/Home";
 
 function App() {
@@ -23,7 +20,7 @@ function App() {
 
         <Route path="/newdelhi" component={NewDelhi}></Route>
 
-        <Route path="/images" component={Images}></Route>
+        {/* <Route path="/images" component={Images}></Route> */}
 
         <Route path="/" component={Home}></Route>
       </Switch>

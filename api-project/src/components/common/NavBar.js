@@ -19,6 +19,7 @@ const NavBar = () => {
             <Link to="/newdelhi" className="navbar-item">
               New Delhi
             </Link>
+
             <Link to="/images" className="navbar-item">
               Images
             </Link>
@@ -30,27 +31,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-/* <nav>
-      <div className="navbar is-light">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
-              Home
-            </Link>
-            <Link to="/wines" className="navbar-item">
-              Wine List
-            </Link>
-            <Link to="/wines/add" className="navbar-item">
-              Add Wine
-            </Link>
-            <Link to="/register" className="navbar-item">
-              Register
-            </Link>
-            <Link to="/login" className="navbar-item">
-              Login
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav> */

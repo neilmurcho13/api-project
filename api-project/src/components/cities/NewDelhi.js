@@ -1,6 +1,7 @@
 import React from "react";
 import { EverythingNewDelhi } from "../../lib/NewsApi";
 import CityCard from "../cityIndex/CityCard";
+import DelhiWeatherComponent from "../weather/DelhiWeatherComponent";
 
 const NewDehli = () => {
   const [state, setState] = React.useState({ newDelhiNews: [] });
@@ -19,6 +20,7 @@ const NewDehli = () => {
   console.log(state);
   return (
     <section className="section">
+      <DelhiWeatherComponent />
       <div className="container">
         <div className="columns is-multiline">
           {state.newDelhiNews.map((newDelhi) => (
