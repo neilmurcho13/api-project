@@ -5,10 +5,8 @@ import Home from "./components/common/Home";
 import "./App.css";
 import London from "./components/cities/London";
 import NewYork from "./components/cities/NewYork";
-
+import Images from "./components/images/Images";
 import NewDelhi from "./components/cities/NewDelhi";
-
-// import Home from "./components/common/Home";
 
 function App() {
   return (
