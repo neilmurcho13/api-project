@@ -3,6 +3,7 @@ import { EverythingNewDelhi } from "../../lib/NewsApi";
 import CityCard from "../cityIndex/CityCard";
 import CityImage from "../cityIndex/CityImage";
 import DelhiImages from "../images/DelhiImages";
+import DelhiWeatherComponent from "../weather/DelhiWeatherComponent";
 
 const NewDelhi = () => {
   const [state, setState] = React.useState({ newDelhiNews: [] });
@@ -22,6 +23,7 @@ const NewDelhi = () => {
   return (
     <section className="section">
       <DelhiImages />
+      <DelhiWeatherComponent />
       <div className="container">
         <div className="columns is-multiline">
           {/* <CityImage />
