@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react';
 
 const CityCard = ({ key, title, description, url, urlToImage }) => {
-  console.log({ key, title, description, url, urlToImage });
   return (
     <div className="column is-one-third-desktop is-one-third-tablet is-half-mobile">
       <div className="card ">
