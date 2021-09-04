@@ -1,11 +1,8 @@
 import React from "react";
 import { EverythingNewYork } from "../../lib/NewsApi";
 import CityCard from "../cityIndex/CityCard";
-
-
-
 import Images from "../images/Images";
-
+import NewYorkWeatherComponent from "../weather/NewYorkWeatherComponent";
 
 const NewYork = () => {
   const [state, setState] = React.useState({ newYorkNews: [] });
@@ -24,10 +21,8 @@ const NewYork = () => {
   console.log(state);
   return (
     <section className="section">
-
-      
-
       <Images />
+      <NewYorkWeatherComponent />
 
       <div className="container">
         <div className="columns is-multiline">

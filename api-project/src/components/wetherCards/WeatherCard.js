@@ -4,7 +4,9 @@ const WeatherCard = ({ description, temp, feels_like }) => {
   console.log({ description, temp, feels_like });
   return (
     <div className="container">
+
       <div className="card" style={{ opacity: 0.6 }}>
+
         <div className="card-header">
           <h4 className="card-header-title">Live Weather</h4>
         </div>
