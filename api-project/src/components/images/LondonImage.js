@@ -2,6 +2,7 @@
 import React from "react";
 import { getPhotosLondon } from "../../lib/ImageApi";
 import CityImage from "../cityIndex/CityImage";
+import London from "../cities/London";
 
 const randomNumberGenerator = (arrayLength) => {
     const randomNumber = Math.ceil(Math.random() * arrayLength)
@@ -31,11 +32,21 @@ const LondonImages = () => {
     console.log("state is", state);
 
     return (
-        <div className="result" >
+        // <div className="result" style={{ backgroundImage: `url(${state.unsplashImageLondon.urls.full})`, backgroundSize: 'cover', height: '900px' }} >
+        <>
             <CityImage
                 urls={state.unsplashImageLondon.urls.full}
                 image_description={state.unsplashImageLondon.alt_description} />
-        </div>
+        </>
+        // {/* <div style={{ color: 'red' }}>
+        //     Hello World!
+        // </div>
+        // <div style={{ backgroundImage: `url(${state.unsplashImageLondon.urls.full})`, backgroundSize: 'cover', height: '900px' }}>
+        //     <div className="cityName">
+        //         <h1>London</h1>
+        //     </div>
+        // </div> */}
+        // </div >
     )
 
 

@@ -22,22 +22,23 @@ const London = () => {
 
   return (
     <section className="section">
-      <LondonImage />
-      <div className="container">
-        <LondonWeatherComponent />
-        <div className="columns is-multiline">
-          {state.londonNews.map((london) => (
-            <CityCard
-              key={london.key}
-              title={london.title}
-              description={london.description}
-              source={london.source}
-              url={london.url}
-              urlToImage={london.urlToImage}
-            />
-          ))}
+      <LondonImage >
+        <div className="container">
+          <LondonWeatherComponent />
+          <div className="columns is-multiline">
+            {state.londonNews.map((london) => (
+              <CityCard
+                key={london.key}
+                title={london.title}
+                description={london.description}
+                source={london.source}
+                url={london.url}
+                urlToImage={london.urlToImage}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </LondonImage>
     </section>
   );
 };
