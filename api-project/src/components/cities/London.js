@@ -1,8 +1,7 @@
-import React from "react";
-import { EverythingLondon } from "../../lib/NewsApi";
-import LondonWeatherComponent from "../weather/LondonWeatherComponent";
-import CityCard from "../cityIndex/CityCard";
-import LondonImage from "../images/LondonImage";
+import React from 'react';
+import { EverythingLondon } from '../../lib/NewsApi';
+import LondonWeatherComponent from '../weather/LondonWeatherComponent';
+import CityCard from '../cityIndex/CityCard';
 
 const London = () => {
   const [state, setState] = React.useState({ londonNews: [] });
@@ -12,20 +11,21 @@ const London = () => {
       const res = await EverythingLondon();
       setState({ londonNews: res.data.articles });
     } catch (err) {
-      console.log("an error has occured fetching London news", err);
+      console.log('an error has occured fetching London news', err);
     }
   };
   React.useEffect(() => {
     fetchLondonFromApi();
   }, []);
-  console.log(state);
 
   return (
     <section className="section">
       {/* <LondonImage /> */}
+
+      <LondonWeatherComponent />
+
       <div className="container">
-        London News
-        <LondonWeatherComponent />
+
         <div className="columns is-multiline">
           {state.londonNews.map((london) => (
             <CityCard
@@ -39,6 +39,7 @@ const London = () => {
           ))}
         </div>
       </div>
+      {/* </LondonImage> */}
     </section>
   );
 };
