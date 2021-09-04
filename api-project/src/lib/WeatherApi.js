@@ -9,7 +9,7 @@ export const LondonWeather = () => {
 };
 
 export const NewYorkWeather = () => {
-  return axios.get(`${baseUrl}q=NewYork${weatherApiKey}`);
+  return axios.get(`${baseUrl}q=new york${weatherApiKey}`);
 };
 
 export const NewDelhiWeather = () => {

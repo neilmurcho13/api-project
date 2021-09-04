@@ -22,8 +22,9 @@ const London = () => {
 
   return (
     <section className="section">
-      <LondonImage />
+      {/* <LondonImage /> */}
       <div className="container">
+        London News
         <LondonWeatherComponent />
         <div className="columns is-multiline">
           {state.londonNews.map((london) => (
