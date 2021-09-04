@@ -34,7 +34,9 @@ You will also see any lint errors in the console.
 
 open https://github.com/neilmurcho13/api-project
 
-## Where we ended up:
+## Where we ended up:
+
+We completed the page for London but need to replicate this for Delhi and New York as well.  
 
 ## Highlights:
 
