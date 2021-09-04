@@ -50,7 +50,7 @@ We have a working version of the London page that shows a random image, the weat
 
 We are also calling data from three APIs and displaying it.
 
-## Struggles:
+## Struggles:
 
 We initially had some difficulty in getting the information out of the three APIs and understanding the form that this information would take.
 
