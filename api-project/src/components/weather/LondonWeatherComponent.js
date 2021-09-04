@@ -65,6 +65,7 @@ const LondonWeatherComponent = () => {
       <div clas="container">
         <WeatherCard
           description={state.londonWeather.weather[0].description}
+          icon={state.londonWeather.weather[0].icon}
           temp={state.londonWeather.main.temp}
           feels_like={state.londonWeather.main.feels_like}
         />
