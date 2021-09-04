@@ -5,7 +5,6 @@ import Home from "./components/common/Home";
 import "./App.css";
 import London from "./components/cities/London";
 import NewYork from "./components/cities/NewYork";
-import Images from "./components/images/Images";
 import NewDelhi from "./components/cities/NewDelhi";
 
 function App() {
@@ -17,8 +16,6 @@ function App() {
         <Route path="/newyork" component={NewYork}></Route>
 
         <Route path="/newdelhi" component={NewDelhi}></Route>
-
-        {/* <Route path="/images" component={Images}></Route> */}
 
         <Route path="/" component={Home}></Route>
       </Switch>
