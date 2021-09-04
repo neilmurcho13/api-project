@@ -1,6 +1,6 @@
 import React from "react";
 import { EverythingLondon } from "../../lib/NewsApi";
-import London from "../cities/London"
+
 // Neil's new branch
 
 const Home = () => {
@@ -8,18 +8,14 @@ const Home = () => {
     <>
       <section className="hero is-fullheight-with-navbar is-warning">
         <div className="hero-body">
-          <div className="container">
-            <London />
-          </div>
+          <h2 className="title is-1">N & O NEWS</h2>
+        </div>
+        <div className="hero-body">
+          <h3 className="subtitle is-2">
+            Healines and Weather from 3 ish cities
+          </h3>
         </div>
       </section>
-      {/* <h1>
-        The Neil and Olly News App!!! <br></br>On this homepage we need a list of
-        the 3 cities.
-        <br></br> When click on each city it will link to this component.{" "}
-        <br></br>On each component should have the top headlines articles for the
-        city and an image and current weather status.
-      </h1> */}
     </>
   );
 };
