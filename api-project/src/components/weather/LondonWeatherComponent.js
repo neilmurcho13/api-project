@@ -1,14 +1,15 @@
-import React from 'react';
-import { LondonWeather } from '../../lib/WeatherApi';
-import WeatherCard from '../wetherCards/WeatherCard';
-import { getPhotosLondon } from '../../lib/ImageApi';
-import { randomNumberGenerator } from '../images/Images';
+import React from "react";
+import { LondonWeather } from "../../lib/WeatherApi";
+import WeatherCard from "../wetherCards/WeatherCard";
+import { getPhotosLondon } from "../../lib/ImageApi";
+import { randomNumberGenerator } from "../images/Images";
+import London from "../cities/London";
 
 const LondonWeatherComponent = () => {
   const [state, setState] = React.useState({
-    londonWeather: { weather: [{ description: '' }], main: { temp: '' } },
+    londonWeather: { weather: [{ description: "" }], main: { temp: "" } },
   });
-  const [bgImage, setBgimage] = React.useState('');
+  const [bgImage, setBgimage] = React.useState("");
 
   // fetches a photo of london and sets it to state. The state is then used as the background image of the
   // section that wraps the information
@@ -26,7 +27,7 @@ const LondonWeatherComponent = () => {
       const res = await LondonWeather();
       setState({ londonWeather: res.data });
     } catch (err) {
-      console.log('an error has occured fetching weather api', err);
+      console.log("an error has occured fetching weather api", err);
     }
   };
 
@@ -35,7 +36,17 @@ const LondonWeatherComponent = () => {
   }, []);
 
   return (
-    <section className="section" style={{ backgroundImage: `url(${bgImage})` }}>
+    <section
+      className="section"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
       <div clas="container">
         <WeatherCard
           description={state.londonWeather.weather[0].description}
