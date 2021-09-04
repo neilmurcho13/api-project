@@ -7,10 +7,7 @@ const CityImage = ({ urls, image_description, blur_hash }) => {
             <div class="card">
                 <div class="card-image">
                     <img src={urls} alt="text" blurhash={blur_hash} />
-
-                </div>
-                <div class="card-content">
-                    <h1>LONDON</h1>
+                    <span class="card-title" >City Name</span>
                 </div>
             </div>
             {/* <img src={urls} alt="text" />
