@@ -3,7 +3,8 @@ import { LondonWeather } from "../../lib/WeatherApi";
 import WeatherCard from "../wetherCards/WeatherCard";
 import { getPhotosLondon } from "../../lib/ImageApi";
 import { randomNumberGenerator } from "../images/Images";
-import London from "../cities/London";
+import { EverythingLondon } from "../../lib/NewsApi";
+import CityCard from "../cityIndex/CityCard";
 
 const LondonWeatherComponent = () => {
   const [state, setState] = React.useState({
@@ -35,6 +36,20 @@ const LondonWeatherComponent = () => {
     fetchWeatherFromApi();
   }, []);
 
+  const [londonState, setLondonState] = React.useState({ londonNews: [] });
+
+  const fetchLondonFromApi = async () => {
+    try {
+      const res = await EverythingLondon();
+      setLondonState({ londonNews: res.data.articles });
+    } catch (err) {
+      console.log("an error has occured fetching London news", err);
+    }
+  };
+  React.useEffect(() => {
+    fetchLondonFromApi();
+  }, []);
+
   return (
     <section
       className="section"
@@ -53,6 +68,21 @@ const LondonWeatherComponent = () => {
           temp={state.londonWeather.main.temp}
           feels_like={state.londonWeather.main.feels_like}
         />
+      </div>
+      <hr></hr>
+      <div className="container">
+        <div className="columns is-multiline">
+          {londonState.londonNews.map((london) => (
+            <CityCard
+              key={london.key}
+              title={london.title}
+              description={london.description}
+              source={london.source}
+              url={london.url}
+              urlToImage={london.urlToImage}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

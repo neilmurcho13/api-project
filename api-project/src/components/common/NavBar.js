@@ -7,9 +7,9 @@ const NavBar = () => {
       <div className="navbar is-light">
         <div className="container">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item">
+            {/* <Link to="/" className="navbar-item">
               Home
-            </Link>
+            </Link> */}
             <Link to="/london" className="navbar-item">
               London
             </Link>
@@ -20,9 +20,9 @@ const NavBar = () => {
               New Delhi
             </Link>
 
-            <Link to="/images" className="navbar-item">
+            {/* <Link to="/images" className="navbar-item">
               Images
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
