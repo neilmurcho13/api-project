@@ -1,4 +1,4 @@
-# api-project
+# api-project (City News and Weather)
 
 To create a NEWS app using 2 API's.
 
